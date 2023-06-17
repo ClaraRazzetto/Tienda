@@ -1,0 +1,31 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-container .profile-container {
+    display: flex;
+}
+
+.nav-container .nav-link img {
+    height: 30px;
+    width: 100px;
+    max-width: 100%;
+}
+
+.nav-container .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container .nav-link.active {
+    font-weight: bold;
+}

@@ -1,0 +1,33 @@
+-App
+    -Navbar
+        -DropDown: filtro por product category
+        
+        -HomePage: pag principal para usuario loggeado
+        
+        -LandingPage: pag principal usuario no loggeado
+            -Main
+                -Img Logo de la marca
+
+                -CustomizationNav
+                    -SwitchMode: modo oscuro/claro
+                    -DropDown: filtrar por colour, size, price
+                    -DropDown: ordenar por precio más alto, precio mas bajo, name (A-Z)
+                    -Visualization: visualizacion cantidad de articulos: pequeño(5), mediano 
+
+                -Products
+                    -ProductCard
+                        -ProductItem
+            
+            -Footer: información de locación, envio, etc (solo escrito)
+
+        -LoginPage: pag de loggeo
+            -LoginForm
+
+        -ShoppingCard: pag del carrito
+    
+    -NotFoundPage: pag de error en el ruteo
+    
+** el admin tiene que tener un formulario para subir nuevos productos
+    
+
+    
