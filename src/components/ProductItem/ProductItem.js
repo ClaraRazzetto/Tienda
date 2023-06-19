@@ -1,10 +1,28 @@
-import ProductCard from '../ProductCard/ProductCard'
+import React, { useState } from 'react';
+import ProductCard from '../ProductCard/ProductCard';
 
-const ProductItem = ({id, name,category, colour, size, price, img, description}) => {
+const ProductItem= ({ id, name, category, colour, size, price, img, description }) => {
+  const [ProductItems, setProductItems] = useState([]);
+
+  const addToCart = () => {
+    const newItem = {
+      id,
+      name,
+      category,
+      colour,
+      size,
+      price,
+      img,
+      description
+    };
+
+    setProductItems(prevCartItems => [...prevCartItems, newItem]);
+  };
+
   return (
     <ProductCard>
       <div>
-        <img src={img} alt={name}/>
+        <img src={img} alt={name} />
       </div>
       <div>
         <p>Nombre: {name}</p>
@@ -14,10 +32,10 @@ const ProductItem = ({id, name,category, colour, size, price, img, description})
         <p>Talle: {size}</p>
         <p>Precio: {price}</p>
         <p>Descripción: {description}</p>
-        <button>Agregar al carrito</button>
+        <button onClick={addToCart}>Agregar al carrito</button>
       </div>
     </ProductCard>
-  )
-}
+  );
+};
 
-export default ProductItem
+export default ProductItem;

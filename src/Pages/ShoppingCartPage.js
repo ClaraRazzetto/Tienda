@@ -1,9 +1,24 @@
-import React from 'react'
+import React from 'react';
+import removeFromCart from "../components/Products/removeFromCart"
 
-const ShoppingCartPage = () => {
+const ShoppingCart = ({ items }) => {
+  if (!items || items.length === 0) {
+    return <p>No hay items en el carrito.</p>;
+  }
+
   return (
-    <div>ShoppingCartPage</div>
-  )
-}
+    <div>
+      <h2>Carrito de Compras</h2>
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>
+            <span>{item.name}</span>
+            <button onClick={() => removeFromCart(item.id)}>Eliminar</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-export default ShoppingCartPage
+export default ShoppingCart;
