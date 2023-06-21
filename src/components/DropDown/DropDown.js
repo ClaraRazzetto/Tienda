@@ -1,14 +1,18 @@
 import './DropDown.css'
 
-const DropDown = ({label,link1, link2, link3}) => {
+const DropDown = ({label, options, onFilterChange, filterOption}) => {
+
+    const changeSelectHandler = (event) => {
+        onFilterChange(event.target.value);
+    }
+
   return (
       <div className="dropdown">
-          <button className="dropbtn">{label}</button>
-          <div className="dropdown-content">
-              <a>{link1}</a>
-              <a>{link2}</a>
-              <a>{link3}</a>
-          </div>
+          <select onChange={changeSelectHandler} value={filterOption}>
+            <option value="" >{label}</option>
+              {/* Le falta la key */}
+              {options.map((option) => <option value={option.value}>{option.category}</option>)}
+          </select>
       </div>
   )
 }

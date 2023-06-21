@@ -1,19 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import DropDown from '../DropDown/DropDown';
 import './Navbar.css';
 
 const Navbar = () => {
+
+
     return (
         <nav className="nav-container">
 
-            {/* Solo debe aparecer para HomePage y LandingPage */}
-            {/* DropDown: Lstado tipos de productos */}
-            <DropDown className='nav-link'
-                label={"Productos"}
-                link1={"Remeras"}
-                link2={"Pantalones"}
-                link3={"Camperas"}
-            />
+            <h1 className='nav-item'> Switch mode </h1>
 
 
             {/* link a Home */}
@@ -28,17 +22,17 @@ const Navbar = () => {
                 {/* Link a Login */}
                 {/* <Login/> */}
                 <NavLink to="/Login" className='nav-link' >
-                        Login
+                    Login
                 </NavLink>
 
                 {/* Link a carrito */}
                 {/* <ShoppingCart/> */}
                 <NavLink to="/Shoppingcart" className='nav-link' >
-                        ShoppingCart
+                    ShoppingCart
                 </NavLink>
             </div>
 
-           
+
 
         </nav>
     )

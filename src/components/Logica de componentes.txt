@@ -10,7 +10,7 @@
 
                 -CustomizationNav
                     -SwitchMode: modo oscuro/claro
-                    -DropDown: filtrar por colour, size, price
+                    -DropDown: filtrar por colour, size
                     -DropDown: ordenar por precio más alto, precio mas bajo, name (A-Z)
                     -Visualization: visualizacion cantidad de articulos: pequeño(5), mediano 
 
