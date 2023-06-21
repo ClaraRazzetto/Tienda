@@ -1,0 +1,18 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.nav-container .nav-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: black;
+}

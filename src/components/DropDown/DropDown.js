@@ -1,9 +1,9 @@
 import './DropDown.css'
 
-const DropDown = ({link1, link2, link3}) => {
+const DropDown = ({label,link1, link2, link3}) => {
   return (
       <div className="dropdown">
-          <button className="dropbtn">Dropdown</button>
+          <button className="dropbtn">{label}</button>
           <div className="dropdown-content">
               <a>{link1}</a>
               <a>{link2}</a>

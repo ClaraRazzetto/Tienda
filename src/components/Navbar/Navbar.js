@@ -9,6 +9,7 @@ const Navbar = () => {
             {/* Solo debe aparecer para HomePage y LandingPage */}
             {/* DropDown: Lstado tipos de productos */}
             <DropDown className='nav-link'
+                label={"Productos"}
                 link1={"Remeras"}
                 link2={"Pantalones"}
                 link3={"Camperas"}
