@@ -1,6 +1,6 @@
 -App
     -Navbar
-        -DropDown: filtro por product category
+        -SwitchMode: modo oscuro/claro
         
         -HomePage: pag principal para usuario loggeado
         
@@ -9,9 +9,9 @@
                 -Img Logo de la marca
 
                 -CustomizationNav
-                    -SwitchMode: modo oscuro/claro
-                    -DropDown: filtrar por colour, size
-                    -DropDown: ordenar por precio más alto, precio mas bajo, name (A-Z)
+                    -DropDown: filtro por product category
+                    -FilterBy: filtrar por colour, size
+                    -OrderBy: ordenar por precio más alto, precio mas bajo, name (A-Z)
                     -Visualization: visualizacion cantidad de articulos: pequeño(5), mediano 
 
                 -Products

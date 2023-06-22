@@ -1,6 +1,5 @@
 import './CustomizationNav.css'
 import DropDown from '../DropDown/DropDown'
-import { useState } from 'react';
 
 const CustomizationNav = ({onFilterChange, filterOption}) => {
 
@@ -10,8 +9,6 @@ const CustomizationNav = ({onFilterChange, filterOption}) => {
       {/* Solo debe aparecer para HomePage y LandingPage */}
       {/* DropDown: Lstado tipos de productos */}
       <DropDown className='nav-link'
-        label={"Productos"}
-        options={[{value:'Remera', category: 'Remeras'}, {value:'Pantalon', category: 'Pantalones'}, {value:'Abrigo', category: 'Abrigos'}, {value:'Accesorio', category: 'Accesorios'}]}
         onFilterChange={onFilterChange}
         filterOption={filterOption}
       />
