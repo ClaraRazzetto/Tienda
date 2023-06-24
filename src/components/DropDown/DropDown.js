@@ -14,7 +14,6 @@ const DropDown = ({ onFilterChange, filterOption }) => {
         <option value="Pantalon" >Pantalones</option>
         <option value="Campera" >Camperas</option>
         <option value="Accesorio" >Accesorios</option>
-
       </select>
     </div>
   )

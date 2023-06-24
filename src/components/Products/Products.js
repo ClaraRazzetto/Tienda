@@ -1,44 +1,24 @@
 import './Products.css'
 import ProductItem from '../ProductItem/ProductItem'
 
-const Products = ({products, filterOption}) => {
 
-  if(products.length !== 0 ){
-    console.log(products)
-  }
+const Products = ({products}) => {
 
-  if (products.length === 0) {
-    return <></>;
-  }
-
-  const productsMapped = (filterOption === "") 
-  
-  ? products.map((product) => (
+  const productsMapped = products.map((product) => 
+  (
     <ProductItem
       key={product.id}
       name={product.name}
       category={product.category}
-      colour={product.colour}
       size={product.size}
       price={product.price}
       img={product.img}
       description={product.description}
+      total = {product.total}
     />
   )) 
-  :
-  products.filter((product) => product.category === filterOption)
-  .map((product) => (
-    <ProductItem
-      key={product.id}
-      name={product.name}
-      category={product.category}
-      colour={product.colour}
-      size={product.size}
-      price={product.price}
-      img={product.img}
-      description={product.description}
-    />
-  ))
+
+ 
 
   return (
     <div className="products-container">

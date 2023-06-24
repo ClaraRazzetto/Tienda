@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 
-const ProductItem= ({ id, name, category, colour, size, price, img, description }) => {
+const ProductItem= ({ id, name, category, size, price, img, description, total }) => {
+  
+  //VER
   const [ProductItems, setProductItems] = useState([]);
 
   const addToCart = () => {
@@ -9,11 +11,11 @@ const ProductItem= ({ id, name, category, colour, size, price, img, description 
       id,
       name,
       category,
-      colour,
       size,
       price,
       img,
-      description
+      description, 
+      total
     };
 
     setProductItems(prevCartItems => [...prevCartItems, newItem]);
@@ -26,12 +28,11 @@ const ProductItem= ({ id, name, category, colour, size, price, img, description 
       </div>
       <div>
         <p>Nombre: {name}</p>
-        <p>Id: {id}</p>
         <p>Categoria: {category}</p>
-        <p>Color: {colour}</p>
         <p>Talle: {size}</p>
         <p>Precio: {price}</p>
         <p>Descripción: {description}</p>
+        <p>Total: {total}</p>
         <button onClick={addToCart}>Agregar al carrito</button>
       </div>
     </ProductCard>

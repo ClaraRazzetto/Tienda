@@ -23,7 +23,7 @@
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content ul li {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
