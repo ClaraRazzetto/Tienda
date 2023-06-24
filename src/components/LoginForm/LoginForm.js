@@ -2,22 +2,24 @@ import React, { useState } from 'react'
 
 const LoginForm = () => {
 
-    const [username, setUserName] = useState();
-    const [password, setPasword] = useState();
+    const[user, setUser] = useState('');
+    const[password, setPassword] = useState('');
 
+    const loginHandler = () => {
 
+    }
+    
     return (
-        <div>
-            <form>
-                <div>
+        <div className='container'>
+        <h2>Login</h2>
+            <form className='form-group' onSubmit={loginHandler}>
                     <label> Nombre de usuario </label>
-                    <input type="text" value={username} />
-                </div>
-                <div>
+                    <input type="text" value={user} />
+                <br />
                     <label> Contraseña </label>
                     <input type="password" value={password} />
-                </div>
-
+                <br />
+                <button className='form-btn'>Ingresar</button>
             </form>
         </div>
     )

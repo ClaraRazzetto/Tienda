@@ -1,38 +1,48 @@
+import { useState } from "react"
 
 
 const SingUpForm = () => {
+
+    const[user, setUser] = useState('');
+    const[password, setPassword] = useState('');
+    const[email, setEmail] = useState('');
+    const[error, setError] = useState('');
+
+    const userChangeHandler = (event) => {
+        setUser(event.target.value);
+    }
+    const emailChangeHandler = (event) => {
+        setEmail(event.target.value);
+    }
+    const passwordChangeHandler = (event) => {
+        setPassword(event.target.value);
+    }
+
+    const addUserHandler = () => {
+
+    }
+
+
     return (
-        <div>
-            <h1>Formulario</h1>
-            <form action="Formulario Utn">
-                <p>
-                    <label htmlFor="Nombre">Nombre</label>
-                    <input id="nombre" type="text" placeholder='nombre' name="Nombre" />
-                </p>
-                <p>
-                    <label htmlFor="Apellido">Apellido</label>
-                    <input id="apellido" type="text" placeholder='apellido' name='apellido' />
-                </p>
-                <p>
-                    <label htmlFor="Email">Email</label>
-                    <input id="Email" type="text" placeholder='email' name='email' />
-                </p>
-                <p>
-                    <label htmlFor="Telefono">Telefono</label>
-                    <input id="telefono" type="tel" placeholder='telefono' name='telefono' />
-                </p>
-                <p>
-                    <label htmlFor="Password">Password</label>
-                    <input id="password" type="password" placeholder='******' />
-                </p>
-                <p>
-                    <label htmlFor="Confirmar password"> Confirmar Password</label>
-                    <input id="password" type="password" placeholder='******' />
-                </p>
-            </form>
-            <button>Registrarse</button>
-        </div>
+        <div className='container'>
+        <h2>Formulario de Registro</h2>
+        <hr />
+        <form className='form-group'  onSubmit={addUserHandler}>
+    
+            <label>Usuario</label>
+            <input type="text" value={user} onChange={userChangeHandler} />
+         <br />
+            <label>Email</label>
+            <input type="email" value={email} onChange={emailChangeHandler}/>
+          <br />
+            <label>Contraseña</label>
+            <input type="password" value={password} onChange={passwordChangeHandler}/>
+          <br />
+          <button className='form-btn'>Registrarse</button>
+        </form>
+        {error && <span>{error}</span>}
+      </div>
     )
-}
+  }
 
 export default SingUpForm
