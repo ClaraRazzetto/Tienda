@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
+import DeleteProduct from '../DeleteProduct.js/DeleteProduct';
+import EditProduct from '../EditProduct.js/EditProduct';
 
 const ProductItem= ({ id, name, category, size, price, img, description, total }) => {
   
@@ -34,6 +36,8 @@ const ProductItem= ({ id, name, category, size, price, img, description, total }
         <p>Descripción: {description}</p>
         <p>Total: {total}</p>
         <button onClick={addToCart}>Agregar al carrito</button>
+        <DeleteProduct productId = {id}/>
+        <EditProduct productId = {id}/>
       </div>
     </ProductCard>
   );

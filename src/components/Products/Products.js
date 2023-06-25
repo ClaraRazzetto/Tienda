@@ -8,6 +8,7 @@ const Products = ({products}) => {
   (
     <ProductItem
       key={product.id}
+      id= {product.id}
       name={product.name}
       category={product.category}
       size={product.size}
