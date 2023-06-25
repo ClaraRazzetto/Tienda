@@ -25,6 +25,6 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 //Creo una ruta a la referencia al Storage de firebase
-const storage = getStorage();
+const storage = getStorage(app);
 
 export {auth, storage, db}

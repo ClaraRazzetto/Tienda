@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar/Navbar";
 import LoginPage from "./Pages/LoginPage";
 import SingUpPage from "./Pages/SingUpPage"
 import ShoppingCartPage from "./Pages/ShoppingCartPage";
-import AddProduct from "./components/AddProductForm/AddProductForm";
+import AddProductForm from "./components/AddProductForm/AddProductForm";
+
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           {/* Pagina inicial */}
           <Route path="/" Component={HomePage} />
           {/* Agregar producto */}
-          <Route path="/AddProducts" Component={AddProduct} />
+          <Route path="/AddProducts" Component={AddProductForm} />
           {/* Si el usuario pone una ruta que no existe entra a la pag NotFoundPage y muestra un error */}
           <Route path="*" Component={NotFoundPage}/>
           {/* Pagina de Sing up (registrarse) */}

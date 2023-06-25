@@ -16,3 +16,11 @@
 .input-container{
     margin: 2px;
 }
+
+.error-message{
+    color: red;
+}
+
+.response-message{
+    color: green;
+}
