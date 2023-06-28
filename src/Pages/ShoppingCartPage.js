@@ -1,5 +1,6 @@
 import React from 'react';
 import removeFromCart from "../components/Products/removeFromCart"
+import { FirebaseApp } from 'firebase/app';
 
 const ShoppingCart = ({ items }) => {
   if (!items || items.length === 0) {
