@@ -1,10 +1,13 @@
 import React from 'react';
-import removeFromCart from "../components/Products/removeFromCart"
-import { FirebaseApp } from 'firebase/app';
+import removeFromCart from "../components/Products/removeFromCart";
+
+
 
 const ShoppingCart = ({ items }) => {
   if (!items || items.length === 0) {
     return <p>No hay items en el carrito.</p>;
+  
+    
   }
 
   return (

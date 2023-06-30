@@ -5,6 +5,7 @@ const SingUpForm = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [role, setRole] = useState("cliente"); // Nuevo estado para el rol
 
   const userChangeHandler = (event) => {
     setUser(event.target.value);
@@ -35,6 +36,12 @@ const SingUpForm = () => {
       setError("Ingrese una contraseña válida.");
       return;
     }
+    // Verificar el rol seleccionado
+    if (role === "administrador") {
+      // Realizar acciones específicas para el rol de administrador, como cargar productos en Firebase
+      // ...
+      console.log("Cargar productos en Firebase");
+    }
 
     // Si todas las validaciones pasan, puedes realizar alguna acción adicional aquí, como enviar los datos al servidor.
 
@@ -45,7 +52,8 @@ const SingUpForm = () => {
     setError("");
   };
 
-  return (
+  
+  return(
     <div className="container">
       <h2>Formulario de Registro</h2>
       <hr />
@@ -58,6 +66,11 @@ const SingUpForm = () => {
         <br />
         <label>Contraseña</label>
         <input type="password" value={password} onChange={passwordChangeHandler} />
+        <label>Rol</label>
+        <select value={role} onChange={(event) => setRole(event.target.value)}>
+        <option value="cliente">Cliente</option>
+        <option value="administrador">Administrador</option>
+        </select>
         <br />
         <button className="form-btn">Registrarse</button>
       </form>
